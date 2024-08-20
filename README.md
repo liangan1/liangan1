@@ -15,6 +15,11 @@ This kernel enables the flash decoding based the paged kv cache and it has been 
 [Indirect Access KV Cache](https://github.com/intel/intel-extension-for-pytorch/blob/main/csrc/cpu/aten/kernels/MaskedMultiHeadAttentionKrnl.cpp) 
 
 Indirect Access KV_cache (IAKV) is a similar solution to PagedAttention and it is used to reduce the memory overheads caused by the KV cache. Firstly, IAKV pre-allocates buffers (key and value use different buffer) to store all key/value hidden states and beam index information, the data format is shown in the following left figure (beam_width=4 in this case) and token state of key (value) in every timestamp will be store in this pre-allocated buffer. Secondly, we can use beam index history which is shown in the following right figure to decide which beam should be used by a timestamp and this information will generate a offset to access the kv_cache buffer which means that the reorder_cache and concat overheads will be eliminated by this way.
+<div>
+  <img width="40%" src="https://github.com/user-attachments/assets/4baca533-e13b-4a35-9566-333e146a2bc5" alt="Data Layout of KV Cache " title="Data Layout of KV Cache">
+   <img width="40%" src="https://github.com/user-attachments/assets/dc5eafc8-7768-43a8-93f1-51c3a3b73e48" alt="Beam index history" title="Beam index history">
+</div>
+
 
 [Rotary Position Embeeding](https://github.com/intel-innersource/frameworks.ai.pytorch.ipex-cpu/blob/cpu-device/csrc/cpu/aten/kernels/RotaryPositionEmbeddingKnl.cpp) 
 
