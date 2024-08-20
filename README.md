@@ -2,7 +2,7 @@
 
 Liangang is an AI framework engineer in Intel and now is working on the LLM inference optimization. 
 
-## My Contributon in Github
+## My Contributons in Github
 
 [Tensor Parallel for LLM](https://github.com/intel/intel-extension-for-pytorch/commit/4fa64459d03a17839ec49d1081e9c7e15e0c7f52) 
 
@@ -25,7 +25,7 @@ Indirect Access KV_cache (IAKV) is a similar solution to PagedAttention and it i
 
 Support multple LLM models. e.g., lamma/gpt-neox/falcon/GPT-J 6B/CodeGen/ChatGLM...
 
-More contiribution can be found [here](https://github.com/intel/intel-extension-for-pytorch/graphs/contributors)
+More contiributions can be found [here](https://github.com/intel/intel-extension-for-pytorch/graphs/contributors)
 
 ## My Publications and Talks 
 
