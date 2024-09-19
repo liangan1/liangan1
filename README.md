@@ -12,6 +12,10 @@ Implementate the tensor parallel from the scratch and use Shared Memory based Al
 
 This kernel enables the flash decoding based the paged kv cache and it has been used in the [vllm](https://github.com/vllm-project/vllm/blob/main/vllm/attention/ops/ipex_attn.py) repository. 
 
+[Flash Attention Kernel for Chunked Prefill/Prefix Cache/Speculative Decoding](https://github.com/intel/intel-extension-for-pytorch/commit/1479d3dbd7a7d8ad77355ea2d57ea9d0866ca85a)
+
+For Chunked Prefill/Prefix Cache/Speculative Decoding, a part of the key/value token states has been cached and the query lenghth of this step is not 1. In this kernel we enabled the flash attention algorithm for this case. the API is similar to the falsh_attn_val_len in the flash_attn repo. With this kernel, the chunked-prefill can bring 15% performance gain. 
+
 [Indirect Access KV Cache](https://github.com/intel/intel-extension-for-pytorch/blob/main/csrc/cpu/aten/kernels/MaskedMultiHeadAttentionKrnl.cpp) 
 
 Indirect Access KV_cache (IAKV) is a similar solution to PagedAttention and it is used to reduce the memory overheads caused by the KV cache. Firstly, IAKV pre-allocates buffers (key and value use different buffer) to store all key/value hidden states and beam index information, the data format is shown in the following left figure (beam_width=4 in this case) and token state of key (value) in every timestamp will be store in this pre-allocated buffer. Secondly, we can use beam index history which is shown in the following right figure to decide which beam should be used by a timestamp and this information will generate a offset to access the kv_cache buffer which means that the reorder_cache and concat overheads will be eliminated by this way.
