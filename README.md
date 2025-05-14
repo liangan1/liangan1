@@ -32,8 +32,9 @@ Support multple LLM models. e.g., lamma/gpt-neox/falcon/GPT-J 6B/CodeGen/ChatGLM
 More contiributions can be found [here](https://github.com/intel/intel-extension-for-pytorch/graphs/contributors)
 
 ## My Publications and Talks 
-
-[基于至强处理器的AI软件生态](https://marketing.csdn.net/p/4f3a7da76a0dc06a0db8a1f251dd9eea?pId=2409)
+[PyTorch 2 Export Quantization with Intel GPU Backend through Inductor](https://docs.pytorch.org/tutorials/prototype/pt2e_quant_xpu_inductor.html)
 
 [A Novel Scale-Out Training Solution for Deep Learning Recommender Systems](https://www.intel.com/content/www/us/en/developer/articles/technical/novel-scale-out-training-solution-deep-learning-recommender-systems.html)
+
+[基于至强处理器的AI软件生态](https://marketing.csdn.net/p/4f3a7da76a0dc06a0db8a1f251dd9eea?pId=2409)
 
