@@ -3,6 +3,8 @@
 Liangang is an AI framework engineer in Intel and now is working on the LLM inference optimization. 
 
 ## My Contributons in Github
+[Contributions in TorchAO](https://github.com/pytorch/ao/issues?q=state%3Aopen%20is%3Apr%20author%3A%40me)
+
 [FlexAttention on XPU](https://github.com/pytorch/pytorch/pull/143553)
 
 [A16W4 on XPU Device](https://github.com/pytorch/pytorch/issues/153019)
