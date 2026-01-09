@@ -41,6 +41,7 @@ Liangang is an AI framework engineer in Intel and now is working on the LLM infe
 More contiributions can be found [Contributions by liangan1 in Intel-Extension-for-PyTorch(Xeon)](https://github.com/intel/intel-extension-for-pytorch/commits?author=liangan1)
 
 ## My Publications and Talks 
+- [PyTorch 2.9: FlexAttention Optimization Practice on Intel GPUs](https://pytorch.org/blog/pytorch-2-9-flexattention-optimization-practice-on-intel-gpus/)
 - [PyTorch 2.8+TorchAO: Unlock Efficient LLM Inference on Intel® AI PCs](https://pytorch.org/blog/pytorch-2-8torchao-unlock-efficient-llm-inference-on-intel-ai-pcs/)
 
 - [PyTorch 2 Export Quantization with Intel GPU Backend through Inductor](https://docs.pytorch.org/tutorials/prototype/pt2e_quant_xpu_inductor.html)
